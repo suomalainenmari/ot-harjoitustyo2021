@@ -8,7 +8,7 @@ Repositorio Helsingin yliopiston kurssin Ohjelmistotekniikka(TKT20002) laskuteht
 
 Harjoitustyön aiheeksi on valittu 10x10 ruudukossa toimiva Nonogram-peli.
 
-[Dokumentaatio](/dokumentaatio)
+[Dokumentaatio](NonogramApp/dokumentaatio)
 
 ## Tehtävät
 
