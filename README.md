@@ -6,7 +6,8 @@ Repositorio Helsingin yliopiston kurssin Ohjelmistotekniikka(TKT20002) laskuteht
 
 ## Harjoitustyö
 
-Harjoitustyön aiheeksi on ensisijaisesti mietitty **nonogrammia**. Allekirjoittaneen tuntien *tämä mestariajatus* saattaa vielä muuttua ennen viikkoa 2. 
+Harjoitustyön aiheeksi on valittu 10x10 ruudukossa toimiva Nonogram-peli.
+[Dokumentaatio](dokumentaatio)
 
 ## Tehtävät
 
