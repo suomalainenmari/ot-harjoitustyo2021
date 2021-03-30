@@ -20,5 +20,5 @@ Sovelluksessa on tarkoitus voida pelata Nonogram-peliä. Sovelluksessa on vaan y
 * Painike, josta pelin saa aloitettua alusta
 
 ## Käyttöliittymäluonnos
-![Käyttöliittymäluonnos](/kuvat/kayttoliittymaluonnos.jpg)
+![Käyttöliittymäluonnos](kuvat/kayttoliittymaluonnos.jpg)
 Sovelluksessa on yksi näkymä. Ruudukkoon lisätään täytetyt symbolit. Symbolin vaihto tapahtuu nappia painamalla.
