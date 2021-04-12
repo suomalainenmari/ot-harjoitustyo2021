@@ -6,9 +6,10 @@ Repositorio Helsingin yliopiston kurssin Ohjelmistotekniikka(TKT20002) laskuteht
 
 ## Harjoitustyö
 
-Harjoitustyön aiheeksi on valittu 10x10 ruudukossa toimiva Nonogram-peli.
+Harjoitustyön aiheeksi on valittu graafinen laskin, joka suorittaa aritmeettisia laskutoimituksia.
 
-[Dokumentaatio](NonogramApp/dokumentaatio)
+[Dokumentaatio](Laskin/dokumentaatio)
+[Tuntikirjanpito](Laskin/dokumentaatio/tuntikirjanpito.md)
 
 ## Tehtävät
 
