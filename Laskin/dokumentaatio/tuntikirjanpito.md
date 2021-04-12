@@ -9,5 +9,4 @@
 | 12.4. | 3    | käyttöliittymän alustava toteutus, yhteen- ja vähennystoimitusten luominen |
 | 12.4  | 0.5    | määrittelydokumentti |
 | 12.4  | 0.5    | README |
-
 | yht   | 15   | | 
