@@ -10,9 +10,9 @@ Sovellus on luotu Helsingin yliopiston kurssille Ohjelmistotekniikka harjoitusty
 
 ### Dokumentaatio
 
-[Vaatimusmäärittely](Laskin/dokumentaatio/vaatimusmaarittely.md)
+[Vaatimusmäärittely](/dokumentaatio/vaatimusmaarittely.md)
 
-[Tuntikirjanpito](Laskin/dokumentaatio/tuntikirjanpito.md)
+[Tuntikirjanpito](/dokumentaatio/tuntikirjanpito.md)
 
 ### Sovelluksen käynnistäminen
 
