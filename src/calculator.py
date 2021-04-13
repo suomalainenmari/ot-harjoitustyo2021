@@ -12,7 +12,10 @@ class Calculator:
     self.result=self.result*value
 
   def divide(self,value):
-    self.result = self.result/value
+    if value==0:
+      self.result=0.0
+    else:
+      self.result = self.result/value
 
   def clear(self):
     self.result = 0.0
