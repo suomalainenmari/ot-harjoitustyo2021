@@ -27,11 +27,8 @@ poetry --version
 Mikäli sinulla ei vielä poetrya ole, poetryn dokumentaatio tarjoaa useita [asennusvaihtoehtoja](https://python-poetry.org/docs/#installation)
 
 2. Kun poetry on asennettu, voit kloonata projektin koneellesi.
-3. Kun projekti on kloonattu, siirry projektin alihakemistoon Laskin komennolla:
-```bash
-cd Laskin
-```
-4. Kun olet oikeassa hakemistossa, asenna riippuvuudet ja alusta virtuaaliympäristö komennolla:
+
+3. Kun projekti on kloonattu, asenna riippuvuudet ja alusta virtuaaliympäristö komennolla:
 
 ```bash
 poetry install
