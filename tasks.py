@@ -10,7 +10,7 @@ def test(ctx):
 
 @task 
 def coverage(ctx):
-  ctx-run("coverage run --branch -m pytest src")
+  ctx.run("coverage run --branch -m pytest src")
 
 @task
 def coverage_report(ctx):
