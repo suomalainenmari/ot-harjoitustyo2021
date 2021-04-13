@@ -1,5 +1,3 @@
-Tehdään muutos tähän tiedostoon.
-
 # Ohjelmistotekniikka 2021
 
 Repositorio Helsingin yliopiston kurssin Ohjelmistotekniikka(TKT20002) laskutehtäville, sekä harjoitustyölle.
