@@ -43,3 +43,18 @@ class TestCalculator(unittest.TestCase):
         self.calculator.divide(0)
         result = self.calculator.result
         self.assertEqual(result, "Error")
+
+    def test_counter_number_converts_negative_to_positive(self):
+        self.calculator.add(-7)
+        self.calculator.counternumber()
+        self.assertEqual(self.calculator.result, 7.0)
+
+    def test_counter_number_converts_positive_to_negative(self):
+        self.calculator.add(14)
+        self.calculator.counternumber()
+        self.assertEqual(self.calculator.result, -14.0)
+
+    def test_to_percentage_returns_correct_value(self):
+        self.calculator.add(88)
+        self.calculator.to_percentage()
+        self.assertEqual(self.calculator.result, 0.88)

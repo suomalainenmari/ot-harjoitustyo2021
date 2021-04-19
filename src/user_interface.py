@@ -3,11 +3,11 @@ from calculator import Calculator
 
 
 class UI:
-    def __init__(self, root):
+    def __init__(self, root, calculator, result_var):
         self._root = root
         self._entry = None
-        self._calculator = Calculator()
-        self._result_var = DoubleVar()
+        self._calculator = calculator
+        self._result_var = result_var
 
     def start(self):
         self._result_var.set(self._calculator.result)
@@ -46,6 +46,18 @@ class UI:
             command=self._handle_all_clear_click
         )
 
+        counternumber_button = ttk.Button(
+            master=self._root,
+            text="+/-",
+            command=self._handle_counter_click
+        )
+
+        topercentage_button = ttk.Button(
+            master=self._root,
+            text="%",
+            command=self._handle_to_percentage_click
+        )
+
         output_label = ttk.Label(master=self._root, text="Tulos:")
         output_itself = ttk.Label(
             master=self._root, textvariable=self._result_var)
@@ -57,9 +69,11 @@ class UI:
         minus_button.grid(row=3, column=1)
         multiply_button.grid(row=4, column=0)
         divide_button.grid(row=4, column=1)
-        output_label.grid(row=6, column=0)
-        output_itself.grid(row=6, column=1)
+        output_label.grid(row=7, column=0)
+        output_itself.grid(row=7, column=1)
         all_clear_button.grid(row=5, columnspan=2, sticky=constants.W)
+        counternumber_button.grid(row=6, column=0)
+        topercentage_button.grid(row=6, column=1)
 
     def _handle_plus_click(self):
         entry_value = self._entry.get()
@@ -85,10 +99,20 @@ class UI:
         self._calculator.clear()
         self._result_var.set(self._calculator.result)
 
+    def _handle_counter_click(self):
+        self._calculator.counternumber()
+        self._result_var.set(self._calculator.result)
+
+    def _handle_to_percentage_click(self):
+        self._calculator.to_percentage()
+        self._result_var.set(self._calculator.result)
+
 
 window = Tk()
 window.title("Laskin")
+calculator = Calculator()
+result_var = DoubleVar()
 
-ui = UI(window)
+ui = UI(window, calculator, result_var)
 ui.start()
 window.mainloop()
