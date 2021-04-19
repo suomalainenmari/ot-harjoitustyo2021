@@ -13,7 +13,7 @@ class Calculator:
 
   def divide(self,value):
     if value==0:
-      self.result=0.0
+      self.result="Error"
     else:
       self.result = self.result/value
 

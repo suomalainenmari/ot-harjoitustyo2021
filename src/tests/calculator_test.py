@@ -36,3 +36,9 @@ class TestCalculator(unittest.TestCase):
     self.calculator.clear()
     result=str(self.calculator.result)
     self.assertEqual(result, "0.0")
+
+  def test_divide_by_zero_returns_zero(self):
+    self.calculator.add(10)
+    self.calculator.divide(0)
+    result=self.calculator.result
+    self.assertEqual(result, "Error")
