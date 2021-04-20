@@ -13,5 +13,6 @@
 | 13.4  | 2    | Yksikkötestit ja haaraumaraportti |
 | 19.4  | 2    | pylint ja autopep |
 | 19.4  | 1    | taskien päivitys |
+| 19.4  | 1    | Nollalla jakaminen ja testit |
 | 20.4  | 2    | +/- ja %-toiminta ja niiden testit |
 | yht   | 24   | | 
