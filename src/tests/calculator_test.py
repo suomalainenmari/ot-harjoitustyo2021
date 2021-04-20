@@ -58,3 +58,10 @@ class TestCalculator(unittest.TestCase):
         self.calculator.add(88)
         self.calculator.to_percentage()
         self.assertEqual(self.calculator.result, 0.88)
+
+    def test_many_calculations_in_a_row_returns_correct_value(self):
+        self.calculator.add(5)
+        self.calculator.subtract(20)
+        self.calculator.multiply(2)
+        self.calculator.divide(6)
+        self.assertEqual(self.calculator.result, -5.0)

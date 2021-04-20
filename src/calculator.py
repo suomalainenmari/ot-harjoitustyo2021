@@ -21,7 +21,7 @@ class Calculator:
         self.result = 0.0
 
     def counternumber(self):
-        self.result = self.result*(-1)
+        self.result = self.result*(-1.0)
 
     def to_percentage(self):
-        self.result = self.result/100
+        self.result = self.result/100.0
