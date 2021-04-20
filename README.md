@@ -14,6 +14,8 @@ Sovellus on luotu Helsingin yliopiston kurssille Ohjelmistotekniikka harjoitusty
 
 [Tuntikirjanpito](/dokumentaatio/tuntikirjanpito.md)
 
+[Arkkitehtuuri](/dokumentaatio/arkkitehtuuri.md)
+
 ### Sovelluksen käynnistäminen
 
 Sovelluksen toiminta on testattu Python-versiolla `3.6.9`. Mikäli käytössä ilmenee ongelmia, huomioithan, että versiolla voi olla vaikutusta asiaan.
