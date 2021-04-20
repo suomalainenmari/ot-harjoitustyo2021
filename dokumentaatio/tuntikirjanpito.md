@@ -15,4 +15,4 @@
 | 19.4  | 1    | taskien päivitys |
 | 19.4  | 1    | Nollalla jakaminen ja testit |
 | 20.4  | 2    | +/- ja %-toiminta ja niiden testit |
-| yht   | 24   | | 
+| yht   | 25   | | 
