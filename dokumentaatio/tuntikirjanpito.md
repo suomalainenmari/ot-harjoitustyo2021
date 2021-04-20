@@ -10,5 +10,8 @@
 | 12.4  | 0.5  | määrittelydokumentti |
 | 12.4  | 0.5  | README |
 | 13.4  | 2    | Kerto- ja jakolasku, nollaus, sekä koodin refaktorointia |
-| 13.4  | 2    | Yksikkötestit ja haaraumaraportti 
-| yht   | 19   | | 
+| 13.4  | 2    | Yksikkötestit ja haaraumaraportti |
+| 19.4  | 2    | pylint ja autopep |
+| 19.4  | 1    | taskien päivitys |
+| 20.4  | 2    | +/- ja %-toiminta ja niiden testit |
+| yht   | 24   | | 
