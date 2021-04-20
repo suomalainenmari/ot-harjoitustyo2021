@@ -14,8 +14,8 @@ Sovellus on yksinkertainen graafinen laskin. Sovelluksen tarkoitus on voida suor
 
 
 ## Jatkokehitysideoita olevan ajan puitteissa
-- [] Kertomat, potenssit, neliöjuuret yms
-- [] Muistilista laskimen viereen, johon voi kirjoitella haluamiaan muistiinpanoja. 
+- [ ] Kertomat, potenssit, neliöjuuret yms
+- [ ] Muistilista laskimen viereen, johon voi kirjoitella haluamiaan muistiinpanoja. 
 
 ## Käyttöliittymä
 Sovelluksessa on yksi näkymä. Kentässä, jossa näkyy laskutoimituksen tulos päivittyy laskutoimituksia tehdessä. 
