@@ -52,8 +52,10 @@ poetry run invoke test
 
 ### Testikattavuusraportti
 
-Testikattavuusraportin voi muodostaa komentoikkunassa komennolla:
+Testikattavuusraportin voi muodostaa seuraavalla komennolla:
 
 ```bash
 poetry run invoke coverage-report
 ```
+
+Raportti (index.html) löytyy projektiin muodostuvasta hakemistosta htmlcov.
