@@ -35,6 +35,10 @@ Mikäli sinulla ei vielä poetrya ole, poetryn dokumentaatio tarjoaa useita [ase
 ```bash
 poetry install
 ```
+4. Alusta projektin tietokanta komennolla:
+```bash
+python3 src/initialize_database.py
+```
 
 5. Käynnistä sovelus komennolla:
 
@@ -61,3 +65,11 @@ poetry run invoke coverage-report
 ```
 
 Raportti (index.html) löytyy projektiin muodostuvasta hakemistosta htmlcov.
+
+### Pylint tyylitarkastus
+
+Tyylillisen tarkastuksen voi muodostaa seuraavalla komennolla:
+
+```bash
+poetry run invoke lint
+```
