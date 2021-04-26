@@ -9,7 +9,7 @@ class NoteService:
     return self._note_repository.add_note(content)
 
   def show_notes(self):
-    return self._note_repository.get_all_notes
+    return self._note_repository.get_all_notes()
 
   def delete_note_by_id(self,id):
     return self._note_repository.delete_note(id)

@@ -6,7 +6,6 @@ def drop_tables(connection):
   cursor.execute('''
       drop table if exists Notes
   ''')
-
   connection.commit()
 
 def create_tables (connection):
@@ -14,7 +13,7 @@ def create_tables (connection):
 
   cursor.execute("""
       create table Notes(
-        id text primary key,
+        id integer primary key autoincrement,
         content text
       )"""
   )

@@ -6,7 +6,7 @@ class NoteRepository:
 
   def get_all_notes(self):
     db = self._connection.cursor()
-    db.execute("select * from notes")
+    db.execute("select * from Notes")
     result = db.fetchall()
     return result
 

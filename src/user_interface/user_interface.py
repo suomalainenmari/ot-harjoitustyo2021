@@ -1,4 +1,5 @@
-from tkinter import Tk, ttk, constants, DoubleVar
+from tkinter import Tk, ttk, constants, DoubleVar, StringVar
+
 
 class UI:
     def __init__(self, root, calculator, result_var, note_service):
@@ -8,10 +9,12 @@ class UI:
         self._calculator = calculator
         self._result_var = result_var
         self._note_service = note_service
+        self._notes_list_var = None
 
     def start(self):
         self._result_var.set(self._calculator.result)
-
+        self._notes_list_var = StringVar()
+        self._notes_list_var.set(self._note_service.show_notes())
         header_label = ttk.Label(master=self._root, text="Laskin")
         input_label = ttk.Label(master=self._root, text="Syöte:")
         input_note_label = ttk.Label(master=self._root, text="Muistiinpanot:")
@@ -69,6 +72,7 @@ class UI:
         output_label = ttk.Label(master=self._root, text="Tulos:")
         output_itself = ttk.Label(
             master=self._root, textvariable=self._result_var)
+        notelabel = ttk.Label(master=self._root, textvariable = self._notes_list_var)
 
         header_label.grid(row=0, column=0, columnspan=2)
         input_label.grid(row=1, column=0, columnspan=2)
@@ -76,6 +80,7 @@ class UI:
         self._entry.grid(row=2, column=0, columnspan=2)
         self._note_entry.grid(row=2, column=4, columnspan=3)
         save_note_button.grid(row=3,column=4, columnspan=3)
+        notelabel.grid(row=4, column=4, columnspan=3)
         plus_button.grid(row=3, column=0)
         minus_button.grid(row=3, column=1)
         multiply_button.grid(row=4, column=0)
@@ -121,6 +126,6 @@ class UI:
     def _handle_save_click(self):
       content = self._note_entry.get()
       self._note_service.create_note(content)
-    
-   
-
+      self._notes_list_var.set(self._note_service.show_notes())
+      print(self._notes_list_var.get())
+      
