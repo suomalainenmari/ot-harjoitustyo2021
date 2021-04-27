@@ -64,22 +64,23 @@ class UI:
         )
 
         save_note_button = ttk.Button(
-          master=self._root,
-          text="Tallenna",
-          command = self._handle_save_click
+            master=self._root,
+            text="Tallenna",
+            command=self._handle_save_click
         )
 
         output_label = ttk.Label(master=self._root, text="Tulos:")
         output_itself = ttk.Label(
             master=self._root, textvariable=self._result_var)
-        notelabel = ttk.Label(master=self._root, textvariable = self._notes_list_var)
+        notelabel = ttk.Label(
+            master=self._root, textvariable=self._notes_list_var)
 
         header_label.grid(row=0, column=0, columnspan=2)
         input_label.grid(row=1, column=0, columnspan=2)
         input_note_label.grid(row=1, column=4, columnspan=3)
         self._entry.grid(row=2, column=0, columnspan=2)
         self._note_entry.grid(row=2, column=4, columnspan=3)
-        save_note_button.grid(row=3,column=4, columnspan=3)
+        save_note_button.grid(row=3, column=4, columnspan=3)
         notelabel.grid(row=4, column=4, columnspan=3)
         plus_button.grid(row=3, column=0)
         minus_button.grid(row=3, column=1)
@@ -124,8 +125,7 @@ class UI:
         self._result_var.set(self._calculator.result)
 
     def _handle_save_click(self):
-      content = self._note_entry.get()
-      self._note_service.create_note(content)
-      self._notes_list_var.set(self._note_service.show_notes())
-      print(self._notes_list_var.get())
-      
+        content = self._note_entry.get()
+        self._note_service.create_note(content)
+        self._notes_list_var.set(self._note_service.show_notes())
+        print(self._notes_list_var.get())

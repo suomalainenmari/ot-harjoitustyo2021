@@ -5,14 +5,15 @@ from services.note_service import note_service
 
 
 def main():
-  window = Tk()
-  window.title("Laskin")
-  calculator = Calculator()
-  result_var = DoubleVar()
+    window = Tk()
+    window.title("Laskin")
+    calculator = Calculator()
+    result_var = DoubleVar()
 
-  ui = UI(window, calculator, result_var, note_service)
-  ui.start()
-  window.mainloop()
+    ui = UI(window, calculator, result_var, note_service)
+    ui.start()
+    window.mainloop()
+
 
 if __name__ == '__main__':
     main()
