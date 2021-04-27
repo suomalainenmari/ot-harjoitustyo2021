@@ -17,4 +17,5 @@
 | 20.4  | 2    | +/- ja %-toiminta ja niiden testit |
 | 26.4  | 3    | Muutettu projektin rakenne pakettiratkaisuksi |
 | 26.4  | 5    | Lisätty muistiinpanotoiminnallisuus, tietokanta yms |
-| yht   | 33   | | 
+| 27.4  | 2    | Sekvenssikaavio ja release |
+| yht   | 35   | | 
