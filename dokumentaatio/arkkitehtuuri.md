@@ -14,3 +14,7 @@ Aloitusnäkymässä käyttäjä syöttää muistiinpanon sille varattuun kenttä
 ![Sekvenssikaavio](kuvat/muistiinpanon_lisaaminen.png)
 
 Painikkeen painamiseen reagoi tapahtumankäsittelijä, joka kutsuu sovelluslogiikan NoteService metodia create_note jolla on parametrina syötekenttään syötetty sisältö. NoteService välittää tallennuspyynnön NoteRepositoryyn, jossa uusi muistiinpano lisätään tietokantaan. Tämän jälkeen UI:ssa olevalle muuttujalle, joka näyttää muistiinpanot listassa, asetetaan uusi arvo. Tämä tapahtuu kutsumalla NoteServicen metodia _show_notes(). NoteService puolestaan kutsuu NoteRepositoryn metodia get_all_notes, joka palauttaa kaikki tietokantaan haetut vinkit. Kun tämä UI:ssa olevan muuttujan arvo päivittyy renderöityy se ruudulle, ja käyttäjä näkee tallennetun muistiinpanon näytöllä heti.
+
+## Ohjelman rakenteessa tällä hetkellä olevat heikkoudet
+
+Tällä hetkellä muistiinpanoja ei voi käsitellä yksitellen, eikä poistaa, vaan tulevat merkkijonomuuttujana näkyviin. Myöskin tietokanta tyhjenee jokaisen käynnistyksen välissä. Nämä heikkoudet on tarkoitus saada korjattua tulevissa versioissa.
