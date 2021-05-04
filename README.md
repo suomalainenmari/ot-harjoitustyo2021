@@ -16,6 +16,8 @@ Sovellus on luotu Helsingin yliopiston kurssille Ohjelmistotekniikka harjoitusty
 
 [Arkkitehtuuri](/dokumentaatio/arkkitehtuuri.md)
 
+[Käyttöohje](/dokumentaatio/kayttoohje.md)
+
 [Viikon 5 release](https://github.com/suomalainenmari/ot-harjoitustyo2021/releases/tag/viikko5)
 
 ### Sovelluksen käynnistäminen
