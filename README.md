@@ -59,7 +59,7 @@ poetry run invoke start
 Sovelluksessa on tällä hetkellä käytössä yksikkötestejä. Sovellusta käynnistäessä ajettu **poetry install**-komento on asentanut testausta varten tarvittavat riippuvuudet.
 
 Testit voi suorittaa komennolla:
-```bash
+```
 poetry run invoke test
 ```
 
