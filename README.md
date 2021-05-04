@@ -40,17 +40,17 @@ Mikäli sinulla ei vielä poetrya ole, poetryn dokumentaatio tarjoaa useita [ase
 
 3. Kun projekti on kloonattu, asenna riippuvuudet ja alusta virtuaaliympäristö komennolla:
 
-```bash
+```
 poetry install
 ```
 4. Alusta projektin tietokanta komennolla:
-```bash
+```
 poetry run invoke build
 ```
 
 5. Käynnistä sovelus komennolla:
 
-```bash
+```
 poetry run invoke start
 ```
 
@@ -68,7 +68,7 @@ poetry run invoke test
 
 Testikattavuusraportin voi muodostaa seuraavalla komennolla:
 
-```bash
+```
 poetry run invoke coverage-report
 ```
 
@@ -78,6 +78,6 @@ Raportti (index.html) löytyy projektiin muodostuvasta hakemistosta htmlcov.
 
 Tyylillisen tarkastuksen voi muodostaa seuraavalla komennolla:
 
-```bash
+```
 poetry run invoke lint
 ```
