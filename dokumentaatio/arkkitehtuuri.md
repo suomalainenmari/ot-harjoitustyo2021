@@ -1,11 +1,29 @@
 ## Arkkitehtuurikuvaus
 
+### Rakenne
+
+Ohjelmassa on sovellettu kerrosarkkitehtuuria, jossa ohjelma on jaettu kolmeen tasoon: UI, services ja calculator, sekä repositories. Kokonaisuuksien välisiä suhteita on havainnoillistettu pakkauskaaviolla:
 
 ![Pakkauskaavio](kuvat/pakkauskaavio.png)
 
 Luokka UI sisältää käyttöliittymästä vastaavan koodin, ja luokka Calculator laskintoiminnallisuuden sovelluslogiikasta vastaavan koodin. UI:lla on riippuvuus luokkaan Calculator.
 
 Muistiinpanojen käsittelystä vastaavat luokat NoteService ja NoteRepository. NoteService tarjoaa käyttöliittymälle muistiinpanojen tallentamiseen ja esittämiseen metodit. Tietojen tallennuksesta ja hakemisesta tietokannassa vastaa NoteRepository, joka tarjoaa NoteServicelle metodit.
+
+### Käyttöliittymä
+
+Käyttöliittymässä on vain yksi näkymä. Näkymästä vastaa luokka UI. 
+
+### Sovelluslogiikka
+
+Sovellus sisältää toiminnallisuuksia niin laskimen kun muistiinpanojen osalta, ja näistä toiminnallisuuksista vastaavat erilliset luokat, Calculator ja NotesService. Luokat tarjoavat kaikille käyttöliittymän toiminnoilla metodit.
+
+### Tietojen pysyväistallennus
+
+Pakkauksessa repositories oleva luokka NoteRepository vastaa muistiinpanojen pysyväistallennuksesta. Muistiinpanot tallennetaan SQLite tietokantaan. Repository- suunnittelumallin myötä NoteService luokan testauksessa on voitu käyttää stub-tyyppistä ratkaisua oikean tietokannan sijasta.
+
+Pysyväistallennuksen tämänhetkisestä tilanteesta lisätietoa kohdassa "Ohjelman rakenteessa tällä hetkellä olevat heikkoudet
+"
 
 ### Muistiinpanon lisääminen
 
