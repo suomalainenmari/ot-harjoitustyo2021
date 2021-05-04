@@ -1,5 +1,5 @@
 import unittest
-from repositories.note_repository import NoteRepository, note_repository
+from repositories.note_repository import note_repository
 
 
 class TestNoteRepository(unittest.TestCase):
