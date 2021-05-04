@@ -2,6 +2,11 @@ from database_connection import get_database_connection
 
 
 def drop_tables(connection):
+  """Drops the table Notes if it exists
+
+  Args:
+      connection ([type]): Connection to the database
+  """
     cursor = connection.cursor()
 
     cursor.execute('''
@@ -11,6 +16,11 @@ def drop_tables(connection):
 
 
 def create_tables(connection):
+    """Creates a table Notes to the database
+
+  Args:
+      connection ([type]): Connection to the database
+  """
     cursor = connection.cursor()
 
     cursor.execute("""
@@ -24,6 +34,8 @@ def create_tables(connection):
 
 
 def initialize_database():
+  """Initializes the database. Connects to the database, then drops Notes table if exists and then creates Notes table.
+  """
     connection = get_database_connection()
     drop_tables(connection)
     create_tables(connection)

@@ -2,7 +2,17 @@ from tkinter import Tk, ttk, constants, DoubleVar, StringVar
 
 
 class UI:
+  """Class for user interface
+  """
     def __init__(self, root, calculator, result_var, note_service):
+      """Constructor for the class, creates the UI that is displayed for the user
+
+      Args:
+          root : Window for user interface where all widgets go to
+          calculator : Calculator object the user interface uses
+          result_var : Result of calculations displayed
+          note_service : Functionality for adding and displaying notes
+      """
         self._root = root
         self._entry = None
         self._note_entry = None
@@ -12,6 +22,8 @@ class UI:
         self._notes_list_var = None
 
     def start(self):
+      """Creates the widgets; buttons, labels, entries for the application
+      """
         self._result_var.set(self._calculator.result)
         self._notes_list_var = StringVar()
         self._notes_list_var.set(self._note_service.show_notes())
@@ -93,38 +105,54 @@ class UI:
         topercentage_button.grid(row=6, column=1)
 
     def _handle_plus_click(self):
+      """Handles the functionality of user pressing the +-button
+      """
         entry_value = self._entry.get()
         self._calculator.add(float(entry_value))
         self._result_var.set(self._calculator.result)
 
     def _handle_minus_click(self):
+      """Handles the functionality of user pressing the - -button
+      """
         entry_value = self._entry.get()
         self._calculator.subtract(float(entry_value))
         self._result_var.set(self._calculator.result)
 
     def _handle_multiply_click(self):
+      """Handles the functionality of user pressing the *-button
+      """
         entry_value = self._entry.get()
         self._calculator.multiply(float(entry_value))
         self._result_var.set(self._calculator.result)
 
     def _handle_divide_click(self):
+      """Handles the functionality of user pressing the /-button
+      """
         entry_value = self._entry.get()
         self._calculator.divide(float(entry_value))
         self._result_var.set(self._calculator.result)
 
     def _handle_all_clear_click(self):
+      """Handles the functionality of user pressing the AC-button
+      """
         self._calculator.clear()
         self._result_var.set(self._calculator.result)
 
     def _handle_counter_click(self):
+      """Handles the functionality of user pressing the +/- -button
+      """
         self._calculator.counternumber()
         self._result_var.set(self._calculator.result)
 
     def _handle_to_percentage_click(self):
+      """Handles the functionality of user pressing the %-button
+      """
         self._calculator.to_percentage()
         self._result_var.set(self._calculator.result)
 
     def _handle_save_click(self):
+      """Handles the functionality of user pressing Tallenna-button
+      """
         content = self._note_entry.get()
         self._note_service.create_note(content)
         self._notes_list_var.set(self._note_service.show_notes())

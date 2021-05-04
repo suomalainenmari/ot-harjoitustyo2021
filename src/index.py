@@ -5,6 +5,8 @@ from services.note_service import note_service
 
 
 def main():
+  """Sets up the UI for the calculator
+  """
     window = Tk()
     window.title("Laskin")
     calculator = Calculator()
