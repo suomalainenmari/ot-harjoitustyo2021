@@ -20,6 +20,9 @@
 | 27.4  | 2    | Sekvenssikaavio ja release |
 | 4.5   | 1    | Refaktorointia |
 | 4.5   | 1    | Testit note_repositorylle ja note_servicelle |
-|4.5    | 1    | Alustava käyttöohje
-| 4.5   | 1    | Alustava docstring
-| yht   | 39   | | 
+| 4.5   | 1    | Alustava käyttöohje
+| 4.5   | 1    | Alustava docstring |
+| 4.5   | 1    | Tyylikorjauksia  |
+| 4.5   | 1    | Arkkitehtuurikuvaus  |
+
+| yht   | 41   | | 
