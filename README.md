@@ -39,7 +39,7 @@ poetry install
 ```
 4. Alusta projektin tietokanta komennolla:
 ```bash
-python3 src/initialize_database.py
+poetry run invoke build
 ```
 
 5. Käynnistä sovelus komennolla:

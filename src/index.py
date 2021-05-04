@@ -1,6 +1,6 @@
 from tkinter import Tk, DoubleVar
 from user_interface.user_interface import UI
-from calculator import Calculator
+from calculator.calculator import Calculator
 from services.note_service import note_service
 
 

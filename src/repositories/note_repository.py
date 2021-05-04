@@ -19,5 +19,9 @@ class NoteRepository:
         db = self._connection.cursor()
         db.execute("delete from Notes where id=?", [id])
 
+    def delete_all(self):
+        db = self._connection.cursor()
+        db.execute("delete from Notes")
+
 
 note_repository = NoteRepository(get_database_connection())

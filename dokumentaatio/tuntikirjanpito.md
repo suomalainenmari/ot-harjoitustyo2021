@@ -18,4 +18,6 @@
 | 26.4  | 3    | Muutettu projektin rakenne pakettiratkaisuksi |
 | 26.4  | 5    | Lisätty muistiinpanotoiminnallisuus, tietokanta yms |
 | 27.4  | 2    | Sekvenssikaavio ja release |
-| yht   | 35   | | 
+| 4.5   | 1    | Refaktorointia |
+| 4.5   | 1    | Testit note_repositorylle ja note_servicelle |
+| yht   | 37   | | 
