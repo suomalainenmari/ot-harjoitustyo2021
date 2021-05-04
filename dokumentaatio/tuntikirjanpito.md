@@ -24,5 +24,4 @@
 | 4.5   | 1    | Alustava docstring |
 | 4.5   | 1    | Tyylikorjauksia  |
 | 4.5   | 1    | Arkkitehtuurikuvaus  |
-
 | yht   | 41   | | 
