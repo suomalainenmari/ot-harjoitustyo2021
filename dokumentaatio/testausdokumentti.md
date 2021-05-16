@@ -10,4 +10,15 @@ Käyttöliittymäkerrosta ei testata automatisoiduilla testeillä. Muiden ohjelm
 
 ![Haaraumakattavuus](kuvat/haaraumakattavuus.png)
 
-Tiedostosta initialize_database.py on jätetty testaamatta tiedoston suoritus komentoriviĺtä. 
+Haaraumakattavuutta laskee tiedosto initialize_database.py. Tiedostosta ei ole testattu tiedoston suoritusta komentoriviĺtä. 
+
+### Järjestelmätestaus
+
+Järjestelmätason testausta on suoritettu manuaalisesti, niin asennuksen ja konfiguroinnin puolesta, sekä toiminnallisuuksien puolesta. Sovellus on ladattu ja testattu noudattaen [käyttöohjeita](/.kayttohje.md).
+
+[Vaatimusmäärittelydokumentissa](./vaatimusmaarittely.md) mainitut toiminnallisuudet on testattu käyttöliittymän kautta. Myös virheellisiä arvoja, kuten tyhjiä kenttiä, sekä kirjaimia laskimeen on koitettu syöttää. Ohjelma ei printtaa Exceptioneita eikä ohjelma kaadu.
+
+## Sovellukseen jääneet laatuongelmat
+
+Sovellus ei varaudu virhetilanteeseen, jossa sovellusta koitetaan käynnistää ilman että tietokantaa on alustettu `poetry run invoke build`-komennolla.
+
