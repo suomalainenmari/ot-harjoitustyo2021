@@ -1,4 +1,4 @@
-from tkinter import ttk, constants, StringVar
+from tkinter import ttk, constants, Text
 import tkinter.messagebox
 
 
@@ -21,14 +21,11 @@ class UI:
         self._calculator = calculator
         self._result_var = result_var
         self._note_service = note_service
-        self._notes_list_var = None
 
     def start(self):
         """Creates the widgets; buttons, labels, entries for the application
         """
         self._result_var.set(self._calculator.result)
-        self._notes_list_var = StringVar()
-        self._notes_list_var.set(self._note_service.show_notes())
         header_label = ttk.Label(master=self._root, text="Laskin")
         input_label = ttk.Label(master=self._root, text="Syöte:")
         input_note_label = ttk.Label(
@@ -87,8 +84,8 @@ class UI:
         output_label = ttk.Label(master=self._root, text="Tulos:")
         output_itself = ttk.Label(
             master=self._root, textvariable=self._result_var)
-        notelabel = ttk.Label(
-            master=self._root, textvariable=self._notes_list_var)
+        self._notebox = tkinter.Listbox(
+            master=self._root)
 
         header_label.grid(row=0, column=0, columnspan=2)
         input_label.grid(row=1, column=0, columnspan=2)
@@ -96,16 +93,16 @@ class UI:
         self._entry.grid(row=2, column=0, columnspan=2)
         self._note_entry.grid(row=2, column=4, columnspan=3)
         save_note_button.grid(row=3, column=4, columnspan=3)
-        notelabel.grid(row=4, column=4, columnspan=3)
+        self._notebox.grid(row=4, column=4, columnspan=2)
         plus_button.grid(row=3, column=0)
         minus_button.grid(row=3, column=1)
-        multiply_button.grid(row=4, column=0)
-        divide_button.grid(row=4, column=1)
-        output_label.grid(row=7, column=0)
-        output_itself.grid(row=7, column=1)
-        all_clear_button.grid(row=5, columnspan=2, sticky=constants.W)
-        counternumber_button.grid(row=6, column=0)
-        topercentage_button.grid(row=6, column=1)
+        multiply_button.grid(row=4, column=0, sticky = constants.N)
+        divide_button.grid(row=4, column=1, sticky = constants.N)
+        all_clear_button.grid(row=5, columnspan=2, sticky=(constants.W, constants.N))
+        counternumber_button.grid(row=6, column=0, sticky = constants.N)
+        topercentage_button.grid(row=6, column=1, sticky = constants.N)
+        output_label.grid(row=7, column=0, sticky = constants.N)
+        output_itself.grid(row=7, column=1, sticky = constants.N)
 
     def _handle_plus_click(self):
         """Handles the functionality of user pressing the +-button
@@ -115,7 +112,10 @@ class UI:
             self._calculator.add(float(entry_value))
             self._result_var.set(self._calculator.result)
         except:
-            self._error_message()
+          if len(entry_value)<1:
+            self._error_message("Tyhjällä syötteellä ei voida laskea")
+          else:
+            self._error_message("Syötäthän laskimeen pelkkiä numeroita. Huomioithan, että desimaalina käytetään pistettä.")
 
     def _handle_minus_click(self):
         """Handles the functionality of user pressing the - -button
@@ -125,7 +125,10 @@ class UI:
             self._calculator.subtract(float(entry_value))
             self._result_var.set(self._calculator.result)
         except:
-            self._error_message()
+          if len(entry_value)<1:
+            self._error_message("Tyhjällä syötteellä ei voida laskea")
+          else:
+            self._error_message("Syötäthän laskimeen pelkkiä numeroita. Huomioithan, että desimaalina käytetään pistettä.")
 
     def _handle_multiply_click(self):
         """Handles the functionality of user pressing the *-button
@@ -135,7 +138,10 @@ class UI:
             self._calculator.multiply(float(entry_value))
             self._result_var.set(self._calculator.result)
         except:
-            self._error_message()
+          if len(entry_value)<1:
+            self._error_message("Tyhjällä syötteellä ei voida laskea")
+          else:
+            self._error_message("Syötäthän laskimeen pelkkiä numeroita. Huomioithan, että desimaalina käytetään pistettä.")
 
     def _handle_divide_click(self):
         """Handles the functionality of user pressing the /-button
@@ -145,7 +151,10 @@ class UI:
             self._calculator.divide(float(entry_value))
             self._result_var.set(self._calculator.result)
         except:
-            self._error_message()
+          if len(entry_value)<1:
+            self._error_message("Tyhjällä syötteellä ei voida laskea")
+          else:
+            self._error_message("Syötäthän laskimeen pelkkiä numeroita. Huomioithan, että desimaalina käytetään pistettä.")
 
     def _handle_all_clear_click(self):
         """Handles the functionality of user pressing the AC-button
@@ -170,9 +179,11 @@ class UI:
         """
         content = self._note_entry.get()
         self._note_service.create_note(content)
-        self._notes_list_var.set(self._note_service.show_notes())
-        print(self._notes_list_var.get())
+        self._notebox.delete(0,tkinter.END)
+        results = self._note_service.show_notes()
+        for result in results:
+          self._notebox.insert(tkinter.END,result + '\n')
 
-    def _error_message(self):
+    def _error_message(self, message):
         tkinter.messagebox.showinfo(
-            "Virheellinen syöte", "Syötäthän laskimeen pelkkiä numeroita")
+            "Virheellinen syöte", message)
