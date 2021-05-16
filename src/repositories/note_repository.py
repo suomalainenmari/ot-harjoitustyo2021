@@ -22,8 +22,6 @@ class NoteRepository:
         notes_db = self._connection.cursor()
         notes_db.execute("select * from Notes")
         result = notes_db.fetchall()
-        print("Seuraavassa tulostetaan note_repositoryn result muuttuja")
-        print(result)
         return result
 
     def add_note(self, content):

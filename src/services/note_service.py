@@ -31,11 +31,9 @@ class NoteService:
             [type]: [description]
         """
         results = self._note_repository.get_all_notes()
-        print(results)
         notes_content = []
         for result in results:
             notes_content.append(result[1])
-        print(notes_content)
         return notes_content
 
     def delete_notes(self):
