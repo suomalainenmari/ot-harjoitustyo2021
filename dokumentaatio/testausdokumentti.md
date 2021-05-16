@@ -14,7 +14,7 @@ Haaraumakattavuutta laskee tiedosto initialize_database.py. Tiedostosta ei ole t
 
 ### Järjestelmätestaus
 
-Järjestelmätason testausta on suoritettu manuaalisesti, niin asennuksen ja konfiguroinnin puolesta, sekä toiminnallisuuksien puolesta. Sovellus on ladattu ja testattu noudattaen [käyttöohjeita](./kayttohje.md).
+Järjestelmätason testausta on suoritettu manuaalisesti, niin asennuksen ja konfiguroinnin puolesta, sekä toiminnallisuuksien puolesta. Sovellus on ladattu ja testattu noudattaen [käyttöohjeita](./kayttoohje.md).
 
 [Vaatimusmäärittelydokumentissa](./vaatimusmaarittely.md) mainitut toiminnallisuudet on testattu käyttöliittymän kautta. Myös virheellisiä arvoja, kuten tyhjiä kenttiä, sekä kirjaimia laskimeen on koitettu syöttää. Ohjelma ei printtaa Exceptioneita eikä ohjelma kaadu.
 
