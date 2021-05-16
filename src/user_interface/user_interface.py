@@ -85,7 +85,8 @@ class UI:
         output_itself = ttk.Label(
             master=self._root, textvariable=self._result_var)
         self._notebox = tkinter.Listbox(
-            master=self._root)
+            master=self._root, )
+        self._get_notes_at_start()
 
         header_label.grid(row=0, column=0, columnspan=2)
         input_label.grid(row=1, column=0, columnspan=2)
@@ -93,7 +94,7 @@ class UI:
         self._entry.grid(row=2, column=0, columnspan=2)
         self._note_entry.grid(row=2, column=4, columnspan=3)
         save_note_button.grid(row=3, column=4, columnspan=3)
-        self._notebox.grid(row=4, column=4, columnspan=2)
+        self._notebox.grid(row=6, column=4, columnspan=2)
         plus_button.grid(row=3, column=0)
         minus_button.grid(row=3, column=1)
         multiply_button.grid(row=4, column=0, sticky = constants.N)
@@ -178,12 +179,28 @@ class UI:
         """Handles the functionality of user pressing Tallenna-button
         """
         content = self._note_entry.get()
-        self._note_service.create_note(content)
-        self._notebox.delete(0,tkinter.END)
-        results = self._note_service.show_notes()
-        for result in results:
-          self._notebox.insert(tkinter.END,result + '\n')
+        if len(content)<2:
+          self._error_message("Muistiinpanon minimipituus on 2 merkkiä")
+        else:
+          self._note_service.create_note(content)
+          self._notebox.delete(0,tkinter.END)
+          results = self._note_service.show_notes()
+          for result in results:
+            self._notebox.insert(tkinter.END,result + '\n')
+
+    def _get_notes_at_start(self):
+          """Function that fetches the notes from database. Used when starting the app.
+          """
+          results = self._note_service.show_notes()
+          for result in results:
+            self._notebox.insert(tkinter.END,result + '\n')
+
 
     def _error_message(self, message):
-        tkinter.messagebox.showinfo(
+          """Handles functionality of sending a messagebox to the user when invalid input is given
+
+          Args:
+          message : Message to be displayed to the user 
+          """
+          tkinter.messagebox.showinfo(
             "Virheellinen syöte", message)
