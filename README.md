@@ -22,9 +22,9 @@ Sovellus on luotu Helsingin yliopiston kurssille Ohjelmistotekniikka harjoitusty
 
 #### Releaset
 
-[Viikon 5 release](https://github.com/suomalainenmari/ot-harjoitustyo2021/releases/tag/viikko5)
+[Lopullinen versio](https://github.com/suomalainenmari/ot-harjoitustyo2021/releases/tag/final)
 
-[Viikon 6 release](https://github.com/suomalainenmari/ot-harjoitustyo2021/releases/tag/viikko6)
+[Muut releaset](https://github.com/suomalainenmari/ot-harjoitustyo2021/releases)
 
 ### Sovelluksen käynnistäminen
 

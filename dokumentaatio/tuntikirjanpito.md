@@ -24,4 +24,9 @@
 | 4.5   | 1    | Alustava docstring |
 | 4.5   | 1    | Tyylikorjauksia  |
 | 4.5   | 1    | Arkkitehtuurikuvaus  |
-| yht   | 41   | | 
+| 16.5  | 2    | Käyttöliittymän fiksailua  |
+| 16.5  | 2    | Virheiden korjausta  |
+| 16.5  | 1    | Tyylien korjaus, nimeämistarkastukset  |
+| 16.5  | 2    | Testausdokumentti  |
+| 16.5  | 4    | Viimeistely  |
+| yht   | 52   | | 
