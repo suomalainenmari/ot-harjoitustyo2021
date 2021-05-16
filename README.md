@@ -4,7 +4,7 @@ Repositorio Helsingin yliopiston kurssin Ohjelmistotekniikka(TKT20002) laskuteht
 
 ## Graafinen laskin
 
-Sovelluksen avulla käyttäjien on mahdollista suorittaa aritmeettisia laskutoimituksia.
+Sovelluksen avulla käyttäjien on mahdollista suorittaa aritmeettisia laskutoimituksia. Tämän lisäksi käyttäjän on mahdollista tallentaa haluamiaan muistiinpanoja laskimen viereen. Muistiinpanot säilyvät sovelluksen sulkemisen ja uudelleenkäynnistyksen jälkeen. Muistiinpanot pystyy myös poistamaan.
 
 Sovellus on luotu Helsingin yliopiston kurssille Ohjelmistotekniikka harjoitustyöksi.
 
@@ -17,6 +17,8 @@ Sovellus on luotu Helsingin yliopiston kurssille Ohjelmistotekniikka harjoitusty
 [Arkkitehtuuri](/dokumentaatio/arkkitehtuuri.md)
 
 [Käyttöohje](/dokumentaatio/kayttoohje.md)
+
+[Testausdokumentti](/dokumentaatio/testausdokumentti.md)
 
 #### Releaset
 
