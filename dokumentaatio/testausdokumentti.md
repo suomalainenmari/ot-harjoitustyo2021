@@ -4,6 +4,10 @@ Ohjelmaa on testattu automatisoidusti yksikkö- ja integraatiotasolla käyttäen
 
 ## Yksikkö- ja integraatiotestaus
 
+Sovelluslogiikasta vastaavat luokat `NoteService` sekä `Calculator`. Näitä luokkia on testattu `TestNoteService`- ja `TestCalculator`-testiluokilla. NoteService-luokkaa on testattu alustamalla NoteService-olio injektoimalla sille valekomponentti `FakeNoteRepository` korvaamaan tietokantaa.
+
+Repository-kerroksen luokkaa `NoteRepository` testataan testiluokalla `TestNoteRepository`.
+
 ### Testauskattavuus
 
 Käyttöliittymäkerrosta ei testata automatisoiduilla testeillä. Muiden ohjelmakerrosten osalta haaraumakattavuus on 97%.
@@ -20,5 +24,6 @@ Järjestelmätason testausta on suoritettu manuaalisesti, niin asennuksen ja kon
 
 ## Sovellukseen jääneet laatuongelmat
 
-Sovellus ei varaudu virhetilanteeseen, jossa sovellusta koitetaan käynnistää ilman että tietokantaa on alustettu `poetry run invoke build`-komennolla.
+- Sovellus ei varaudu virhetilanteeseen, jossa sovellusta koitetaan käynnistää ilman että tietokantaa on alustettu `poetry run invoke build`-komennolla.
+- Ei testitietokantaa erikseen repository-kerroksen testeille
 
