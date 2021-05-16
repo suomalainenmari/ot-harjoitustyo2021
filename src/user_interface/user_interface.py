@@ -1,6 +1,5 @@
-from tkinter import  ttk, constants, StringVar
+from tkinter import ttk, constants, StringVar
 import tkinter.messagebox
-
 
 
 class UI:
@@ -113,40 +112,40 @@ class UI:
         """
         entry_value = self._entry.get()
         try:
-          self._calculator.add(float(entry_value))
-          self._result_var.set(self._calculator.result)
+            self._calculator.add(float(entry_value))
+            self._result_var.set(self._calculator.result)
         except:
-          self._error_message()
+            self._error_message()
 
     def _handle_minus_click(self):
         """Handles the functionality of user pressing the - -button
         """
         entry_value = self._entry.get()
         try:
-          self._calculator.subtract(float(entry_value))
-          self._result_var.set(self._calculator.result)
+            self._calculator.subtract(float(entry_value))
+            self._result_var.set(self._calculator.result)
         except:
-          self._error_message()
+            self._error_message()
 
     def _handle_multiply_click(self):
         """Handles the functionality of user pressing the *-button
         """
         entry_value = self._entry.get()
         try:
-          self._calculator.multiply(float(entry_value))
-          self._result_var.set(self._calculator.result)
+            self._calculator.multiply(float(entry_value))
+            self._result_var.set(self._calculator.result)
         except:
-          self._error_message()
+            self._error_message()
 
     def _handle_divide_click(self):
         """Handles the functionality of user pressing the /-button
         """
         entry_value = self._entry.get()
         try:
-          self._calculator.divide(float(entry_value))
-          self._result_var.set(self._calculator.result)
+            self._calculator.divide(float(entry_value))
+            self._result_var.set(self._calculator.result)
         except:
-          self._error_message()
+            self._error_message()
 
     def _handle_all_clear_click(self):
         """Handles the functionality of user pressing the AC-button
@@ -175,4 +174,5 @@ class UI:
         print(self._notes_list_var.get())
 
     def _error_message(self):
-      tkinter.messagebox.showinfo("Virheellinen syöte", "Syötäthän laskimeen pelkkiä numeroita")
+        tkinter.messagebox.showinfo(
+            "Virheellinen syöte", "Syötäthän laskimeen pelkkiä numeroita")
