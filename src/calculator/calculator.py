@@ -2,7 +2,7 @@ class Calculator:
     """Class that performs calculations
     """
 
-    def __init__(self, result=0.0):
+    def __init__(self, result: float=0.0):
         """Constructor for the class, creates calculator-object for the user interface to use
 
         Args:
