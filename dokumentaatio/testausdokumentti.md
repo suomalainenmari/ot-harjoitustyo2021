@@ -8,6 +8,6 @@ Ohjelmaa on testattu automatisoidusti yksikkö- ja integraatiotasolla käyttäen
 
 Käyttöliittymäkerrosta ei testata automatisoiduilla testeillä. Muiden ohjelmakerrosten osalta haaraumakattavuus on 97%.
 
-![Haaraumakattavuus] (kuvat/haaraumakattavuus.png)
+![Haaraumakattavuus](kuvat/haaraumakattavuus.png)
 
 Tiedostosta initialize_database.py on jätetty testaamatta tiedoston suoritus komentoriviĺtä. 
