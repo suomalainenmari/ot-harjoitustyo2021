@@ -4,7 +4,7 @@ Ohjelmaa on testattu automatisoidusti yksikkö- ja integraatiotasolla käyttäen
 
 ## Yksikkö- ja integraatiotestaus
 
-Sovelluslogiikasta vastaavat luokat `NoteService` sekä `Calculator`. Näitä luokkia on testattu `TestNoteService`- ja `TestCalculator`-testiluokilla. NoteService-luokkaa on testattu alustamalla NoteService-olio injektoimalla sille valekomponentti `FakeNoteRepository` korvaamaan tietokantaa.
+Sovelluslogiikasta vastaavat luokat `NoteService`, sekä `Calculator`. Näitä luokkia on testattu `TestNoteService`- ja `TestCalculator`-testiluokilla. NoteService-luokkaa on testattu alustamalla NoteService-olio injektoimalla sille valekomponentti `FakeNoteRepository` korvaamaan tietokantaa.
 
 Repository-kerroksen luokkaa `NoteRepository` testataan testiluokalla `TestNoteRepository`.
 
