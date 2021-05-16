@@ -40,7 +40,7 @@ Painikkeen painamiseen reagoi tapahtumankäsittelijä, joka kutsuu sovelluslogii
 
 Aloitusnäkymässä näkyvät käyttäjän syöttämät, poistamattomat muistiinpanot oikealla ruudukossa. Ruudukon alla on painike "Tyhjennä muistiinpanot".
 
-![Sekvenssikaavio](dokumentaatio/muistiinpanojen_poistaminen.png)
+![Sekvenssikaavio](kuvat/muistiinpanojen_poistaminen.png)
 
 Painikkeen painamiseen reagoi tapahtumankäsittelijä, joka kutsuu sovelluslogiikan NoteService metodia delete_notes. NoteService välittää poistopyynnön NoteRepositoryyn, jossa tietokantataulu Notes tyhjennetään muistiinpanoista. Tapahtumankäsittelijä myös  tyhjentää Listbox-tyyppisen muuttujan _notebox sisällön, jolloin näkymä renderöityy käyttäjälle, ja muistiinpanot sisältävä ruudukko näkyy tyhjänä.
 
@@ -48,6 +48,6 @@ Painikkeen painamiseen reagoi tapahtumankäsittelijä, joka kutsuu sovelluslogii
 
 Seuraava sekvenssikaavio kuvaa tilannetta, jossa käyttäjä syöttää "Syöte:"-kenttään luvun ja painaa tämän jälkeen "+"-näppäintä.
 
-![Sekvenssikaavio](dokumentaatio/laskimen_kaytto.png)
+![Sekvenssikaavio](kuvat/laskimen_kaytto.png)
 
 Painikkeen painamiseen reagoi tapahtumankäsittelijä, joka kutsuu luokan Calculator metodia add. Metodille välitetään parametrina käyttäjän "Syöte:"-kenttään syöttämä luku. Metodi add suorittaa laskutoimituksen muuttujan result suhteen. Tapahtumankäsittelijä myös asettaa arvon muuttujalle result_var hakemalla uudeksi arvoksi result:in arvon. Tämä renderöi näkymän, ja käyttäjälle näkyy uusi tulos.
