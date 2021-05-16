@@ -1,4 +1,6 @@
 from tkinter import  ttk, constants, StringVar
+import tkinter.messagebox
+
 
 
 class UI:
@@ -110,29 +112,41 @@ class UI:
         """Handles the functionality of user pressing the +-button
         """
         entry_value = self._entry.get()
-        self._calculator.add(float(entry_value))
-        self._result_var.set(self._calculator.result)
+        try:
+          self._calculator.add(float(entry_value))
+          self._result_var.set(self._calculator.result)
+        except:
+          self._error_message()
 
     def _handle_minus_click(self):
         """Handles the functionality of user pressing the - -button
         """
         entry_value = self._entry.get()
-        self._calculator.subtract(float(entry_value))
-        self._result_var.set(self._calculator.result)
+        try:
+          self._calculator.subtract(float(entry_value))
+          self._result_var.set(self._calculator.result)
+        except:
+          self._error_message()
 
     def _handle_multiply_click(self):
         """Handles the functionality of user pressing the *-button
         """
         entry_value = self._entry.get()
-        self._calculator.multiply(float(entry_value))
-        self._result_var.set(self._calculator.result)
+        try:
+          self._calculator.multiply(float(entry_value))
+          self._result_var.set(self._calculator.result)
+        except:
+          self._error_message()
 
     def _handle_divide_click(self):
         """Handles the functionality of user pressing the /-button
         """
         entry_value = self._entry.get()
-        self._calculator.divide(float(entry_value))
-        self._result_var.set(self._calculator.result)
+        try:
+          self._calculator.divide(float(entry_value))
+          self._result_var.set(self._calculator.result)
+        except:
+          self._error_message()
 
     def _handle_all_clear_click(self):
         """Handles the functionality of user pressing the AC-button
@@ -159,3 +173,6 @@ class UI:
         self._note_service.create_note(content)
         self._notes_list_var.set(self._note_service.show_notes())
         print(self._notes_list_var.get())
+
+    def _error_message(self):
+      tkinter.messagebox.showinfo("Virheellinen syöte", "Syötäthän laskimeen pelkkiä numeroita")
