@@ -34,21 +34,18 @@ class NoteService:
         print(results)
         notes_content = []
         for result in results:
-          notes_content.append(result[1])
+            notes_content.append(result[1])
         print(notes_content)
         return notes_content
 
+    def delete_notes(self):
+        """Forwards the request for repository-layer for deleting all notes in database
 
-    def delete_note_by_id(self, id):
-        """Forwards the request for repository-layer for deleting note by id
-
-        Args:
-            id : Identificator for the note
 
         Returns:
             [type]: [description]
         """
-        return self._note_repository.delete_note(id)
+        return self._note_repository.delete_all()
 
 
 note_service = NoteService()

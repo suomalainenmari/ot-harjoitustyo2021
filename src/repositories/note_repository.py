@@ -19,9 +19,9 @@ class NoteRepository:
         Returns:
             [type]: [description]
         """
-        db = self._connection.cursor()
-        db.execute("select * from Notes")
-        result = db.fetchall()
+        notes_db = self._connection.cursor()
+        notes_db.execute("select * from Notes")
+        result = notes_db.fetchall()
         print("Seuraavassa tulostetaan note_repositoryn result muuttuja")
         print(result)
         return result
@@ -32,23 +32,14 @@ class NoteRepository:
         Args:
             content : The content of the note
         """
-        db = self._connection.cursor()
-        db.execute("insert into Notes (content) values (?)", [content])
-
-    def delete_note(self, id):
-        """Deletes note from the database by note id
-
-        Args:
-            id : Note identificator
-        """
-        db = self._connection.cursor()
-        db.execute("delete from Notes where id=?", [id])
+        notes_db = self._connection.cursor()
+        notes_db.execute("insert into Notes (content) values (?)", [content])
 
     def delete_all(self):
         """Deletes all notes from the database table Notes
         """
-        db = self._connection.cursor()
-        db.execute("delete from Notes")
+        notes_db = self._connection.cursor()
+        notes_db.execute("delete from Notes")
 
 
 note_repository = NoteRepository(get_database_connection())
